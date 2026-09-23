@@ -2,6 +2,8 @@
 
 A reproducible visual search pipeline for historical auction catalogues. It turns catalogue pages into artwork crops, extracts self-supervised DINO descriptors, and serves an interactive Dash research interface with source links back to the Heidelberg catalogue.
 
+Live demo: [auctionquery.duckdns.org](https://auctionquery.duckdns.org)
+
 ## What is included
 
 - `app.py` — CPU/GPU compatible Dash retrieval application.

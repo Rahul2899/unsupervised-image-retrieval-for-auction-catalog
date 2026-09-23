@@ -1,6 +1,6 @@
 # Auction Retrieval Research Log
 
-This log records reproducible pipeline decisions and experiment outcomes. Paths refer to the HPC workspace unless stated otherwise.
+This log records reproducible pipeline decisions and experiment outcomes. Paths are represented with portable placeholders; no machine-specific paths are stored.
 
 ## Current research question
 
@@ -66,7 +66,7 @@ GPU training job `1812477` was submitted on the `work` partition with one RTX 20
 ## YOLO retry preparation (2026-09-18)
 
 - The failed job's stdout path was inside `<HPC_DATA_ROOT>`, which is at its 400,000-file hard limit. The environment and Ultralytics import work on TinyX; the missing stdout plus full file quota make Slurm output setup the likely cause of exit `0:53`.
-- Retry candidate sends logs, Ultralytics config/cache, dataset copy, and run artifacts to `<HPC_WORK_ROOT>/<HPC_ACCOUNT>/auction-retrieval-yolo-v0`; production source data and baseline weights stay in `<HPC_DATA_ROOT>`.
+- Retry candidate sends logs, Ultralytics config/cache, dataset copy, and run artifacts to `<HPC_WORK_ROOT>/auction-retrieval-yolo-v0`; production source data and baseline weights stay in `<HPC_DATA_ROOT>`.
 - Dataset has 14 train and 24 validation images, with 5 and 12 nonempty label files. Labels remain pseudo-labeled and unreviewed; any resulting metrics are provisional, not ground truth.
 - Candidate uses class `artwork`; it does not detect arbitrary yellow-colored objects.
 - Staged dataset copy matches source files apart from its YAML root path. TinyX loaded the dataset and baseline checkpoint with Ultralytics 8.3.204; all 55 boxes are structurally valid, with a maximum 5e-9 normalized edge-rounding overrun.

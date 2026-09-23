@@ -2,6 +2,8 @@
 
 The public repository contains only small example images. Large corpus artifacts stay in external storage and are intentionally ignored by Git:
 
+Example JPEGs are metadata-stripped before publication.
+
 - 16,469 source PDFs
 - 1,215,291 rendered pages
 - 589,501 final YOLO v2 crops
