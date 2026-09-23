@@ -20,7 +20,7 @@ The final corpus contains **16,469 PDFs**, **1,215,291 rendered pages**, and **5
 Requirements: Python 3.11+ and enough disk space for the external crop and feature artifacts.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Rahul2899/unsupervised-image-retrieval-for-auction-catalog.git
 cd <repository-directory>
 python3 -m venv .venv
 source .venv/bin/activate
