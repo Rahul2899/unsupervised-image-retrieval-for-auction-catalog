@@ -1,0 +1,11 @@
+.git
+.venv
+__pycache__
+data/pdfs
+data/pages
+data/crops_yolo_v1
+data/crops_yolo_v2
+data/features_yolo_v2
+evaluation_results
+*.pt
+*.pkl

@@ -1,0 +1,16 @@
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
+WORKDIR /app
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
+COPY . .
+
+EXPOSE 7865
+VOLUME ["/data"]
+CMD ["python", "app.py", "--host", "0.0.0.0", "--port", "7865", "--db-image-dir", "/data/crops_yolo_v2", "--features-base", "/data/features_yolo_v2"]

@@ -1,0 +1,10 @@
+class,artifact,repository_path,verified_count,storage,notes
+final,yolo_v2_crops,data/crops_yolo_v2,589501,external,"Final fine-tuned YOLO crop set; includes crop_metadata.jsonl"
+final,features_c4_c5,data/features_yolo_v2/C4_C5_max_mac_c1_pca512_whiten/660K,589501,external,"PCA-512 whitened C4+C5 index"
+final,features_c5,data/features_yolo_v2/C5_mac_c1_pca512_whiten/660K,589501,external,"PCA-512 whitened C5 index; app default"
+final,pdfs,data/pdfs,16469,external,"Source PDF corpus; archive separately"
+final,page_images,data/pages,1215291,external,"Rendered PDF pages; archive separately"
+final,yolo_weights,models/detection_weights.pt,,external,"Final YOLO weights; keep outside Git"
+final,ground_truth,data/ground_truth.json,,external,"Evaluation labels; required only for metrics"
+final,query_examples,data/query_images,18,git,"Small example query set"
+final,page_examples,data/page_images,2,git,"Small UI examples"
