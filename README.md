@@ -42,10 +42,10 @@ data/features_yolo_v2/C4_C5_max_mac_c1_pca512_whiten/660K/{features_l2.pt,index.
 Start locally:
 
 ```bash
-python app.py --host <DEPLOYMENT_HOST> --port 8050
+python app.py --host 0.0.0.0 --port 8050
 ```
 
-Open <http://<DEPLOYMENT_HOST>:8050>. The app loads both indexes once at startup, uses **C5 Only** by default, and keeps similarity values internal to ranking. Each result exposes an **Image Source** link and opens the inspector only when selected.
+The live deployment is available at [auctionquery.duckdns.org](https://auctionquery.duckdns.org). The app loads both indexes once at startup, uses **C5 Only** by default, and keeps similarity values internal to ranking. Each result exposes an **Image Source** link and opens the inspector only when selected.
 
 For a container deployment, mount the external data at `/data`:
 
